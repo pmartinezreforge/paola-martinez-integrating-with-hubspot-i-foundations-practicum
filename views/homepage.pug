@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title= title
+        link(rel='stylesheet', href='/css/style.css')
+    body
+        .container
+            h1 Pets Collection
+
+
+
+            if petsObject && petsObject.length > 0
+                table
+                    thead
+                        tr
+                            th Pet Name
+                            th Pet Breed
+                            th Pet Type
+                    tbody
+                        each pet in petsObject
+                            tr
+                                td= pet.properties.pet_name
+                                td= pet.properties.pet_breed
+                                td= pet.properties.pet_type
+            else
+                p No pets found
