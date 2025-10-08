@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title= title
+        link(rel='stylesheet', href='/css/style.css')
+    body
+        .container
+            h1 Add New Pet
+            
+            p 
+                a(href='/') Return to the homepage
+            
+            form(action='/update-cobj' method='POST')
+                div
+                    label(for='petName') Pet Name:
+                    br
+                    input#petName(type='text' name='petName' required)
+                
+                div
+                    label(for='petBreed') Pet Breed:
+                    br
+                    input#petBreed(type='text' name='petBreed' required)
+                
+                div
+                    label(for='petType') Pet Type:
+                    br
+                    input#petType(type='text' name='petType' required)
+                
+                div
+                    button(type='submit') Add Pet
